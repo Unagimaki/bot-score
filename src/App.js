@@ -8,9 +8,13 @@ function App() {
     const score = urlParams.get('score');
     setScore(score)
   }, [])
+  const arr = score.split("");
+
   return (
     <div className="App">
-      Score: {score}
+      Grammar: {arr[0]}
+      Vocabulary: {arr[1]}
+      Connectivity: {arr[2]}
     </div>
   );
 }
