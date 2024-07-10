@@ -14,6 +14,9 @@ function App() {
       Grammar: {arr[0]}
       Vocabulary: {arr[1]}
       Connectivity: {arr[2]}
+      <div className="progress-bar"></div>
+
+
     </div>
   );
 }

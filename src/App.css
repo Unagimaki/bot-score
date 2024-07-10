@@ -5,4 +5,33 @@
 
 body {
   color: #fff;
+  padding: 50px;
+}
+
+
+.progress-bar {
+  width: 40px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #007bff;
+  transition: width 1s ease-out;
+}
+
+.progress-bar.fill {
+  animation: fill 1s ease-out forwards;
+}
+
+@keyframes fill {
+  to {
+    width: 100%;
+  }
 }
