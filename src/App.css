@@ -1,37 +1,48 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  color: #fff;
+  color: #000;
   padding: 50px;
 }
-
+.score_item {
+  display: flex;
+  gap: 20px;
+}
+.score_item:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .progress-bar {
-  width: 40px;
-  height: 10px;
-  background-color: #fff;
+  width: 60px;
+  height: 15px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  border: 1px solid black;
 }
 
 .progress-bar::before {
   content: "";
   display: block;
-  width: 0;
+  width: 0%;
   height: 100%;
-  background-color: #007bff;
-  transition: width 1s ease-out;
-}
-
-.progress-bar.fill {
-  animation: fill 1s ease-out forwards;
+  background-color: var(--progress-color, gray); /* default color */
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: fill 1s forwards;
+  animation-delay: 1s;
 }
 
 @keyframes fill {
-  to {
-    width: 100%;
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width, 100%);
   }
 }

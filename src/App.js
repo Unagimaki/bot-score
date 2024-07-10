@@ -6,19 +6,63 @@ function App() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const score = urlParams.get('score');
+    // const score = '345'
     setArr(score.split(''))
   }, [])
 
+  const getProgressBarWidth = (score) => {
+    switch (score) {
+      case '4':
+        return '80%';
+      case '5':
+        return '100%';
+      case '3':
+        return '50%';
+      default:
+        return '100%';
+    }
+  }
+  const getProgressBarColor = (score) => {
+    switch (score) {
+      case '2':
+        return 'red'
+      case '4':
+        return 'green';
+      case '5':
+        return '#08ff1c';
+      case '3':
+        return 'orange';
+      default:
+        return '100%';
+    }
+  }
+
   return (
     <div className="App">
-      Grammar: {arr[0]}
-      Vocabulary: {arr[1]}
-      Connectivity: {arr[2]}
-      <div className="progress-bar"></div>
-
-
+      <div className='score_item'>Grammar: {arr[0]} 
+        <div className="progress-bar" 
+          style={{ 
+            '--progress-width': getProgressBarWidth(arr[0]), 
+            '--progress-color': getProgressBarColor(arr[0]) 
+          }}></div>
+      </div>
+      <div className='score_item'>Vocabulary: {arr[1]} 
+        <div className="progress-bar" 
+          style={{ 
+            '--progress-width': getProgressBarWidth(arr[1]), 
+            '--progress-color': getProgressBarColor(arr[1]) 
+          }}></div>
+      </div>
+      <div className='score_item'>Connectivity: {arr[2]} 
+        <div className="progress-bar" 
+          style={{ 
+            '--progress-width': getProgressBarWidth(arr[2]), 
+            '--progress-color': getProgressBarColor(arr[2]) 
+          }}></div>
+      </div>
     </div>
   );
+
 }
 
 export default App;
