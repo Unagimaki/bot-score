@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [score, setScore] = useState('')
   const [arr, setArr] = useState([])
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
