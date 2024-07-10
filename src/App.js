@@ -3,12 +3,13 @@ import './App.css';
 
 function App() {
   const [score, setScore] = useState('')
+  const [arr, setArr] = useState([])
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const score = urlParams.get('score');
     setScore(score)
+    setArr(score.split(''))
   }, [])
-  const arr = score.split("");
 
   return (
     <div className="App">
