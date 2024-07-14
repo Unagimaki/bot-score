@@ -10,10 +10,6 @@ function App() {
     score && setArr(score.split(',').map(Number));
   }, []);
   
-  useEffect(() => {
-    alert(arr)
-  }, [arr])
-
   return (
     <div className="App">
       <div className='score_item'>Grammar: {arr[0]} 
