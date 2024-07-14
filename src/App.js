@@ -5,8 +5,9 @@ function App() {
   const [arr, setArr] = useState([])
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const score = urlParams.get('score');
-    alert(score);
+    alert(urlParams)
+    const score = urlParams.get('score')
+    alert(score)
     score && setArr(score.split(''))
   }, [])
   
