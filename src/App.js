@@ -4,10 +4,10 @@ import './App.css';
 function App() {
   const [arr, setArr] = useState([])
   useEffect(() => {
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const score = urlParams.get('score');
-    const score = '345'
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = urlParams.get('score');
     setArr(score.split(''))
+    alert(arr)
   }, [])
 
   const getProgressBarWidth = (score) => {
