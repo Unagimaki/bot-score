@@ -6,9 +6,12 @@ function App() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const score = urlParams.get('score');
-    setArr(score.split(''))
-    alert(arr)
+    score && setArr(score.split(''))
   }, [])
+  
+  useEffect(() => {
+    alert(arr)
+  }, [arr])
 
   const getProgressBarWidth = (score) => {
     switch (score) {
