@@ -6,6 +6,7 @@ function App() {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+    alert(urlParams);
     const score = urlParams.get('score');
     alert(score)
     score && setArr(score.split(',').map(Number));
