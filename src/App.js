@@ -3,13 +3,13 @@ import './App.css';
 
 function App() {
   const [arr, setArr] = useState([])
+
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    alert(urlParams)
-    const score = urlParams.get('score')
+    const score = urlParams.get('score');
     alert(score)
-    score && setArr(score.split(''))
-  }, [])
+    score && setArr(score.split(',').map(Number));
+  }, []);
   
   useEffect(() => {
     alert(arr)
