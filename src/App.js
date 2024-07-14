@@ -28,20 +28,6 @@ function App() {
         return '100%';
     }
   }
-  const getProgressBarColor = (score) => {
-    switch (score) {
-      case '2':
-        return 'red'
-      case '4':
-        return 'green';
-      case '5':
-        return '#08ff1c';
-      case '3':
-        return 'orange';
-      default:
-        return '100%';
-    }
-  }
 
   return (
     <div className="App">
