@@ -48,22 +48,22 @@ function App() {
       <div className='score_item'>Grammar: {arr[0]} 
         <div className="progress-bar" 
           style={{ 
-            '--progress-width': getProgressBarWidth(arr[0]), 
-            '--progress-color': getProgressBarColor(arr[0]) 
+            '--progress-width': `${getProgressBarWidth(arr[0])}%`, 
+            '--progress-color': 'green'
           }}></div>
       </div>
       <div className='score_item'>Vocabulary: {arr[1]} 
         <div className="progress-bar" 
           style={{ 
-            '--progress-width': getProgressBarWidth(arr[1]), 
-            '--progress-color': getProgressBarColor(arr[1]) 
+            '--progress-width': `${getProgressBarWidth(arr[1])}%`, 
+            '--progress-color': 'green' 
           }}></div>
       </div>
       <div className='score_item'>Connectivity: {arr[2]} 
         <div className="progress-bar" 
           style={{ 
-            '--progress-width': getProgressBarWidth(arr[2]), 
-            '--progress-color': getProgressBarColor(arr[2]) 
+            '--progress-width': `${getProgressBarWidth(arr[2])}%`, 
+            '--progress-color': 'green' 
           }}></div>
       </div>
     </div>
